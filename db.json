@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "nombre": "Prueba",
+      "apellido": "Uno",
+      "correo": "pruebauno@gmail.com",
+      "contrasena": "12345",
+      "id": 1
+    },
+    {
+      "nombre": "Prueba",
+      "apellido": "Dos",
+      "correo": "pruebados@hotmail.com",
+      "contrasena": "qwe2123",
+      "id": 2
+    }
+  ]
+}

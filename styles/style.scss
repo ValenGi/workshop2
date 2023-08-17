@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Kumbh+Sans:wght@400;700&display=swap');
+
+$base-color:hsl(0, 0%, 98%);
+$gray: hsl(0, 0%, 41%);
+$black: hsl(0, 0%, 8%);
+$menuFontSize: 15px;
+
+@mixin distribucion{
+    display: flex;
+    align-items: center;  
+}
+
+*{
+    padding: 3px 7px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    background-color: $base-color;
+    color: $gray;
+}
+h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: $black;
+}
+.header{
+    @include distribucion;
+    justify-content: space-between;
+    
+    &-menu{
+        @include distribucion;
+        cursor: pointer;
+        
+        &-elements{
+            @include distribucion;
+        }
+    }   
+    &-user{
+        button{
+            margin: 20px;
+            border-radius: 15px;
+            padding: 12px;
+            font-size: $menuFontSize;
+            cursor: pointer;
+            
+        }
+        .btnLogin{
+            border: none;
+            &:hover{
+                color: $black;
+            }
+        }
+        .btnRegister{
+            &:hover{
+                color: $base-color;
+                background-color: $black;
+            }
+        }
+        
+    }
+}
+
+li{
+    @include distribucion;
+    padding: 15px;
+    font-size: $menuFontSize;
+}
+
+section{
+    @include distribucion;
+    justify-content: space-around;
+    
+    div{
+        @include distribucion;
+        flex-direction: column;
+        width: 30%;
+        align-items: flex-start;
+        
+    }
+    button{
+        color: $base-color;
+        font-weight: 700;
+        background-color: $black;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+        &:hover{
+            color: $black;
+            background-color: $base-color;
+        }
+    }
+
+}
+.imgPrincipal{
+    width: 500px;
+}
+
+.modal{
+    &-header{width: 100%;}
+    &-body{@extend .modal-header; }
+    &-footer{@extend .modal-header; display: flex; flex-direction: row;}
+    &.fade{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+}
+
+.user-form{
+    display: flex;
+    flex-direction: column;
+    &-item{
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+    &:hover{
+        color: $black
+      }
+  }
+  
